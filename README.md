@@ -40,6 +40,8 @@ GEMINI_API_KEY=tu_clave_de_gemini
 
 No compartas estas claves ni subas `.env` a GitHub. ¡Tita es chusma, pero tus secretos no son para ella!
 
+El archivo `personalidad.txt` contiene el prompt de Tita y forma parte del repositorio. Las claves de Telegram y Gemini no: mantenelas únicamente en tu `.env` local y nunca las publiques.
+
 ## A despertar a Tita
 
 ```bash

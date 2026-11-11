@@ -1,6 +1,7 @@
 import asyncio
 import os
 import logging
+from pathlib import Path
 from dotenv import load_dotenv
 from google import genai
 from google.genai import errors
@@ -9,7 +10,15 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, MessageHandler, filters
 load_dotenv()
 
-PERSONALIDAD_TITA = "Sos Tita, una gata ingeniosa y dormilona."
+PERSONALIDAD_FILE = Path(__file__).with_name("personalidad.txt")
+try:
+    PERSONALIDAD_TITA = PERSONALIDAD_FILE.read_text(encoding="utf-8").strip()
+except OSError as exc:
+    raise RuntimeError(
+        f"No se pudo leer {PERSONALIDAD_FILE.name}. Creá ese archivo local con el prompt de Tita."
+    ) from exc
+if not PERSONALIDAD_TITA:
+    raise RuntimeError(f"{PERSONALIDAD_FILE.name} está vacío; agregá el prompt de Tita.")
 
 MAX_HISTORY_MESSAGES = 10
 HISTORY_KEY = "conversation_history"
