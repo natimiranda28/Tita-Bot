@@ -6,7 +6,8 @@ Tita está para charlar... aunque primero te va a hacer sentir un poquito culpab
 ## ¿Qué hace?
 
 - Te saluda con toda la energía de alguien a quien sacaron de la quinta siesta.
-- Contesta tus mensajes usando Gemini y una personalidad bien rioplatense.
+- Contesta tus mensajes usando Gemini 3.1 Flash Lite y una personalidad bien rioplatense.
+- Recuerda los últimos mensajes de la charla para no contestar como si cada mensaje fuera el primero.
 - Si algo falla, se queja en vez de fingir que entendió. Bastante sensata, la michi.
 
 ## Qué necesitás
@@ -49,7 +50,7 @@ En Telegram, buscá tu bot y mandale `/start`. Para apagarlo, volvé a la termin
 
 ## Si Tita no contesta
 
-Mirá la terminal donde está corriendo: ahí se registran los errores de Telegram o Gemini. Si Gemini está temporalmente saturado (error 503) o se alcanzó un límite de uso (error 429), probá de nuevo más tarde.
+Mirá la terminal donde está corriendo: ahí se registran los errores de Telegram o Gemini. El acceso gratuito de Gemini tiene límites de uso y puede saturarse (error 503); cambiar a un modelo más liviano no garantiza disponibilidad permanente. Si pasa, probá de nuevo más tarde.
 
 ## Nota de convivencia
 
